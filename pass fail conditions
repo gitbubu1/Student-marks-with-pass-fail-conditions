@@ -9,6 +9,9 @@ int main() {
     for (i = 0; i < 5; i++) {
         scanf("%f", &a[i]);
         result += a[i]; // Accumulate the result within the loop
+if(a[i]<33)
+{
+printf("Fail in this subject");
     }
 
     printf("Entered marks:\n");
