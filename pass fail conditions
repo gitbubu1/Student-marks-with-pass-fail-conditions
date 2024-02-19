@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main() {
+    int i;
+    float a[5], result = 0, perc;
+
+    printf("Enter the marks of 5 subjects:\n");
+
+    for (i = 0; i < 5; i++) {
+        scanf("%f", &a[i]);
+        result += a[i]; // Accumulate the result within the loop
+    }
+
+    printf("Entered marks:\n");
+    for (i = 0; i < 5; i++) {
+        printf("%f ", a[i]); //'that extra space after %f is essential for good formatting in results
+    }
+
+    printf("\nTotal marks: %f\n", result);
+    perc = (result / 500) * 100;
+    printf("Percentage of your marks = %f\n", perc);
+
+    if (perc>=70)
+    {
+        printf("\nPassed with Distinction");
+    }
+    else if (perc<70 && perc >=60)
+    {
+        printf("\nPassed with 1st class");
+    }
+    else if (perc<60 && perc >=50)
+    {
+        printf("\nPassed with 2nd class");
+    }
+    else if (perc<50 && perc>=33)
+    {
+        printf("\npassed with 3rd class");
+
+    }
+    else
+    {
+        printf("\nFail");
+    }
+
+    getch();
+}
